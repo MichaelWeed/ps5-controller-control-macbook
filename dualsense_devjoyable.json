@@ -6,10 +6,9 @@
       "manipulators": [
         {
           "type": "basic",
-          "description": "Toggle ON (Options button10) + Native Start",
+          "description": "Toggle mode (Options button10)",
           "from": { "pointing_button": "button10" },
           "to": [
-            { "pointing_button": "button10" },
             {
               "set_variable": {
                 "name": "devjoyable_active",
