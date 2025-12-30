@@ -7,7 +7,7 @@
         {
           "type": "basic",
           "description": "Toggle mode (Options button10)",
-          "from": { "pointing_button": "button10" },
+          "from": { "usage": { "usage_page": 9, "usage": 10 } },
           "to": [
             {
               "set_variable": {
@@ -24,7 +24,7 @@
         {
           "type": "basic",
           "description": "Untoggle mode (Options button10)",
-          "from": { "pointing_button": "button10" },
+          "from": { "usage": { "usage_page": 9, "usage": 10 } },
           "to": [
             {
               "set_variable": {
