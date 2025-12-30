@@ -219,7 +219,7 @@
             { "type": "variable_if", "name": "devjoyable_active", "value": 1 }
           ]
         },
-        },
+
         {
           "type": "basic",
           "description": "D-Pad Left -> Hyper+Left",
