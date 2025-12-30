@@ -1,0 +1,234 @@
+{
+  "title": "DualSense DevJoyable (Final Stabilized)",
+  "rules": [
+    {
+      "description": "DualSense Integrated - Toggle and Remap",
+      "manipulators": [
+        {
+          "type": "basic",
+          "description": "Toggle mode (Options button10)",
+          "from": { "pointing_button": "button10" },
+          "to": [
+            {
+              "set_variable": {
+                "name": "devjoyable_active",
+                "value": 1
+              }
+            }
+          ],
+          "conditions": [
+            { "type": "device_if", "identifiers": [{ "vendor_id": 1356, "product_id": 3302 }] },
+            { "type": "variable_unless", "name": "devjoyable_active", "value": 1 }
+          ]
+        },
+        {
+          "type": "basic",
+          "description": "Untoggle mode (Options button10)",
+          "from": { "pointing_button": "button10" },
+          "to": [
+            {
+              "set_variable": {
+                "name": "devjoyable_active",
+                "value": 0
+              }
+            }
+          ],
+          "conditions": [
+            { "type": "device_if", "identifiers": [{ "vendor_id": 1356, "product_id": 3302 }] },
+            { "type": "variable_if", "name": "devjoyable_active", "value": 1 }
+          ]
+        },
+        {
+          "type": "basic",
+          "description": "L1 (button5) -> Hyper+1",
+          "from": { "pointing_button": "button5" },
+          "to": [{ "key_code": "1", "modifiers": ["command", "control", "option", "shift"] }],
+          "conditions": [
+            { "type": "device_if", "identifiers": [{ "vendor_id": 1356, "product_id": 3302 }] },
+            { "type": "variable_if", "name": "devjoyable_active", "value": 1 }
+          ]
+        },
+        {
+          "type": "basic",
+          "description": "R1 (button6) -> Hyper+2",
+          "from": { "pointing_button": "button6" },
+          "to": [{ "key_code": "2", "modifiers": ["command", "control", "option", "shift"] }],
+          "conditions": [
+            { "type": "device_if", "identifiers": [{ "vendor_id": 1356, "product_id": 3302 }] },
+            { "type": "variable_if", "name": "devjoyable_active", "value": 1 }
+          ]
+        },
+        {
+          "type": "basic",
+          "description": "Triangle (button4) -> Hyper+6",
+          "from": { "pointing_button": "button4" },
+          "to": [{ "key_code": "6", "modifiers": ["command", "control", "option", "shift"] }],
+          "conditions": [
+            { "type": "device_if", "identifiers": [{ "vendor_id": 1356, "product_id": 3302 }] },
+            { "type": "variable_if", "name": "devjoyable_active", "value": 1 }
+          ]
+        },
+        {
+          "type": "basic",
+          "description": "Cross (button2) -> Hyper+4",
+          "from": { "pointing_button": "button2" },
+          "to": [{ "key_code": "4", "modifiers": ["command", "control", "option", "shift"] }],
+          "conditions": [
+            { "type": "device_if", "identifiers": [{ "vendor_id": 1356, "product_id": 3302 }] },
+            { "type": "variable_if", "name": "devjoyable_active", "value": 1 }
+          ]
+        },
+        {
+          "type": "basic",
+          "description": "Circle (button3) -> Hyper+5",
+          "from": { "pointing_button": "button3" },
+          "to": [{ "key_code": "5", "modifiers": ["command", "control", "option", "shift"] }],
+          "conditions": [
+            { "type": "device_if", "identifiers": [{ "vendor_id": 1356, "product_id": 3302 }] },
+            { "type": "variable_if", "name": "devjoyable_active", "value": 1 }
+          ]
+        },
+        {
+          "type": "basic",
+          "description": "Square (button1) -> Hyper+3",
+          "from": { "pointing_button": "button1" },
+          "to": [{ "key_code": "3", "modifiers": ["command", "control", "option", "shift"] }],
+          "conditions": [
+            { "type": "device_if", "identifiers": [{ "vendor_id": 1356, "product_id": 3302 }] },
+            { "type": "variable_if", "name": "devjoyable_active", "value": 1 }
+          ]
+        },
+        {
+          "type": "basic",
+          "description": "L2 (button7) -> Hyper+7",
+          "from": { "pointing_button": "button7" },
+          "to": [{ "key_code": "7", "modifiers": ["command", "control", "option", "shift"] }],
+          "conditions": [
+            { "type": "device_if", "identifiers": [{ "vendor_id": 1356, "product_id": 3302 }] },
+            { "type": "variable_if", "name": "devjoyable_active", "value": 1 }
+          ]
+        },
+        {
+          "type": "basic",
+          "description": "R2 (button8) -> Hyper+8",
+          "from": { "pointing_button": "button8" },
+          "to": [{ "key_code": "8", "modifiers": ["command", "control", "option", "shift"] }],
+          "conditions": [
+            { "type": "device_if", "identifiers": [{ "vendor_id": 1356, "product_id": 3302 }] },
+            { "type": "variable_if", "name": "devjoyable_active", "value": 1 }
+          ]
+        },
+        {
+          "type": "basic",
+          "description": "Share/Create (button9) -> Hyper+9",
+          "from": { "pointing_button": "button9" },
+          "to": [{ "key_code": "9", "modifiers": ["command", "control", "option", "shift"] }],
+          "conditions": [
+            { "type": "device_if", "identifiers": [{ "vendor_id": 1356, "product_id": 3302 }] },
+            { "type": "variable_if", "name": "devjoyable_active", "value": 1 }
+          ]
+        },
+        {
+          "type": "basic",
+          "description": "Touchpad (button14) -> Hyper+0",
+          "from": { "pointing_button": "button14" },
+          "to": [{ "key_code": "0", "modifiers": ["command", "control", "option", "shift"] }],
+          "conditions": [
+            { "type": "device_if", "identifiers": [{ "vendor_id": 1356, "product_id": 3302 }] },
+            { "type": "variable_if", "name": "devjoyable_active", "value": 1 }
+          ]
+        },
+        {
+          "type": "basic",
+          "description": "Touchpad (usage 14) -> Hyper+0",
+          "from": { "usage": { "usage_page": 9, "usage": 14 } },
+          "to": [{ "key_code": "0", "modifiers": ["command", "control", "option", "shift"] }],
+          "conditions": [
+            { "type": "device_if", "identifiers": [{ "vendor_id": 1356, "product_id": 3302 }] },
+            { "type": "variable_if", "name": "devjoyable_active", "value": 1 }
+          ]
+        },
+        {
+          "type": "basic",
+          "description": "L3 (button11) -> Hyper+L",
+          "from": { "pointing_button": "button11" },
+          "to": [{ "key_code": "l", "modifiers": ["command", "control", "option", "shift"] }],
+          "conditions": [
+            { "type": "device_if", "identifiers": [{ "vendor_id": 1356, "product_id": 3302 }] },
+            { "type": "variable_if", "name": "devjoyable_active", "value": 1 }
+          ]
+        },
+        {
+          "type": "basic",
+          "description": "L3 (usage 11) -> Hyper+L",
+          "from": { "usage": { "usage_page": 9, "usage": 11 } },
+          "to": [{ "key_code": "l", "modifiers": ["command", "control", "option", "shift"] }],
+          "conditions": [
+            { "type": "device_if", "identifiers": [{ "vendor_id": 1356, "product_id": 3302 }] },
+            { "type": "variable_if", "name": "devjoyable_active", "value": 1 }
+          ]
+        },
+        {
+          "type": "basic",
+          "description": "R3 (button12) -> Hyper+R",
+          "from": { "pointing_button": "button12" },
+          "to": [{ "key_code": "r", "modifiers": ["command", "control", "option", "shift"] }],
+          "conditions": [
+            { "type": "device_if", "identifiers": [{ "vendor_id": 1356, "product_id": 3302 }] },
+            { "type": "variable_if", "name": "devjoyable_active", "value": 1 }
+          ]
+        },
+        {
+          "type": "basic",
+          "description": "R3 (usage 12) -> Hyper+R",
+          "from": { "usage": { "usage_page": 9, "usage": 12 } },
+          "to": [{ "key_code": "r", "modifiers": ["command", "control", "option", "shift"] }],
+          "conditions": [
+            { "type": "device_if", "identifiers": [{ "vendor_id": 1356, "product_id": 3302 }] },
+            { "type": "variable_if", "name": "devjoyable_active", "value": 1 }
+          ]
+        },
+        {
+          "type": "basic",
+          "description": "D-Pad Up -> Hyper+Up",
+          "from": { "generic_desktop": "dpad_up" },
+          "to": [{ "key_code": "up_arrow", "modifiers": ["command", "control", "option", "shift"] }],
+          "conditions": [
+            { "type": "device_if", "identifiers": [{ "vendor_id": 1356, "product_id": 3302 }] },
+            { "type": "variable_if", "name": "devjoyable_active", "value": 1 }
+          ]
+        },
+        {
+          "type": "basic",
+          "description": "D-Pad Down -> Hyper+Down",
+          "from": { "generic_desktop": "dpad_down" },
+          "to": [{ "key_code": "down_arrow", "modifiers": ["command", "control", "option", "shift"] }],
+          "conditions": [
+            { "type": "device_if", "identifiers": [{ "vendor_id": 1356, "product_id": 3302 }] },
+            { "type": "variable_if", "name": "devjoyable_active", "value": 1 }
+          ]
+        },
+        {
+          "type": "basic",
+          "description": "D-Pad Right -> Hyper+Right",
+          "from": { "generic_desktop": "dpad_right" },
+          "to": [{ "key_code": "right_arrow", "modifiers": ["command", "control", "option", "shift"] }],
+          "conditions": [
+            { "type": "device_if", "identifiers": [{ "vendor_id": 1356, "product_id": 3302 }] },
+            { "type": "variable_if", "name": "devjoyable_active", "value": 1 }
+          ]
+        },
+        {
+          "type": "basic",
+          "description": "D-Pad Left -> Hyper+Left",
+          "from": { "generic_desktop": "dpad_left" },
+          "to": [{ "key_code": "left_arrow", "modifiers": ["command", "control", "option", "shift"] }],
+          "conditions": [
+            { "type": "device_if", "identifiers": [{ "vendor_id": 1356, "product_id": 3302 }] },
+            { "type": "variable_if", "name": "devjoyable_active", "value": 1 }
+          ]
+        }
+      ]
+    }
+  ]
+}
